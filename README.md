@@ -1,75 +1,73 @@
-## Rocketseat Ignite Course
+# Rocketseat Ignite Course
 
-### Node.js
+## Node.js
 ---
 Starting package.json:
-- yarn init -y 
+<code>yarn init -y</code>
 
 Install dev tools:
-- yarn add express
+<code>yarn add express</code>
 
 Installing server to run application:
-- yarn add nodemon -D
+<code>yarn add nodemon -D</code>
 
 Put in package.json:
 
 <code>
   "scripts": {
-
     "dev": "nodemon src/index.js"
-
   },
 </code>
 
 Run nodemon:
-- yarn dev
+<code>yarn dev</code>
 
 
-### TypeScript
+## TypeScript
 ---
-Starting package.json:
-- yarn init -y 
-
-Install dev tools:
-- yarn add express
-
-The archive type is now .ts
-
-Change const express = require("express"); for import express from 'express';
-
-Express is work, if you install types.
-yarn add @types/express -D
+The archive type is .ts now.
 
 Node don't know .TS, so you must install typescript dependencies, to run the server.
-yarn add typescrypt -D
+<code>yarn add typescrypt -D</code>
+
+Express is work, if you install types.
+<code>yarn add @types/express -D</code>
 
 Starting typescript
-yarn tsc --init
+<code>yarn tsc --init</code>
 
-Changing .ts for .js
-yarn tsc
+Install Nodemon!
+
+Changing .ts for .js:
+<code>yarn tsc</code>
 ! Remember ! 
 To create archives .js in another directory, configure tsconfig.json, outDIR:
 "outDir": "./dist"
 
-Install Nodemon!
-
 Automatic convert .ts to .js:
-yarn add ts-node-dev -D
+<code>yarn add ts-node-dev -D</code>
 
 In package.json, insert:
+<code>
   "scripts":{
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server.ts"
-  },
+  },</code>
 
- --transpile-only : Don't show sintaxe errors, in dev ambient
- --ignore-watch node_modules : Don't verify changes in node_modules
- --respawn : App reload
+
+> --transpile-only : Don't show sintaxe errors, in dev ambient
+
+> --ignore-watch node_modules : Don't verify changes in node_modules
+
+> --respawn : App reload
+
 
 In tsconfig.json, comment strict, It is use by javascript to verify errors in app, but typescript do this very well:
 "strict": true,
 
-#### Configuring VSCode debug
+Change const express = require("express"); for import express from 'express';
+
+### VSCode debug config
+
 - Run Debug Play
 - Select create a launch.json file
 - Select Node.js
@@ -83,3 +81,11 @@ To connect debug in app, to do:
 - Insert --inspect in attribute "dev" in package.json archive.
 
 RUN AND DEBUG
+
+### ESLint and Prettier Config
+
+https://www.notion.so/judenilson/ESLint-e-Prettier-Trilha-Node-js-acaec106bad8480db04ca6038fc77bcd
+
+### UUID
+<code>yarn add uuid</code>
+<code>yarn add @types/uuid -D</code>
