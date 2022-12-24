@@ -53,3 +53,33 @@ To create archives .js in another directory, configure tsconfig.json, outDIR:
 "outDir": "./dist"
 
 Install Nodemon!
+
+Automatic convert .ts to .js:
+yarn add ts-node-dev -D
+
+In package.json, insert:
+  "scripts":{
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server.ts"
+  },
+
+ --transpile-only : Don't show sintaxe errors, in dev ambient
+ --ignore-watch node_modules : Don't verify changes in node_modules
+ --respawn : App reload
+
+In tsconfig.json, comment strict, It is use by javascript to verify errors in app, but typescript do this very well:
+"strict": true,
+
+#### Configuring VSCode debug
+- Run Debug Play
+- Select create a launch.json file
+- Select Node.js
+In launch.json:
+type: node,
+The option "request": "launch" The debug start with app, we don't want this.
+- Change to "request": "attach" to run debug only when it find errors
+- Delete or comment "program"
+
+To connect debug in app, to do:
+- Insert --inspect in attribute "dev" in package.json archive.
+
+RUN AND DEBUG
