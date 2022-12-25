@@ -54,10 +54,8 @@ In package.json, insert:
   },</code>
 
 
-> --transpile-only : Don't show sintaxe errors, in dev ambient
-
-> --ignore-watch node_modules : Don't verify changes in node_modules
-
+> --transpile-only : Don't show sintaxe errors, in dev ambient<br>
+> --ignore-watch node_modules : Don't verify changes in node_modules<br>
 > --respawn : App reload
 
 
@@ -89,3 +87,10 @@ https://www.notion.so/judenilson/ESLint-e-Prettier-Trilha-Node-js-acaec106bad848
 ### UUID
 <code>yarn add uuid</code>
 <code>yarn add @types/uuid -D</code>
+
+## S.O.L.I.D
+S => SRP - Single Responsability Principle <br>
+O => OCP - Open-Closed Principle <br>
+L => LSP - Liskov Substitution Principle <br>
+I => ISP - Interface Segregation Principle <br>
+D => DIP - Dependency inversion Principle <br>
