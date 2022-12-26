@@ -4,11 +4,22 @@ import {
   ICreateCategoryDTO,
 } from "./ICategoriesRepository";
 
+// Singleton - Criar apenas uma instância de uma classe ficando GLOBAL
+
 class CategoriesRepository implements ICategoriesRepository {
   private categories: Category[];
 
-  constructor() {
+  private static INSTANCE: CategoriesRepository;
+
+  private constructor() {
     this.categories = [];
+  }
+
+  public static getInstance(): CategoriesRepository{
+    if(!CategoriesRepository.INSTANCE){
+      CategoriesRepository.INSTANCE = new CategoriesRepository();
+    }
+    return CategoriesRepository.INSTANCE;
   }
 
   create({ description, name }: ICreateCategoryDTO): void {
