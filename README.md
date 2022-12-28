@@ -94,3 +94,13 @@ O => OCP - Open-Closed Principle <br>
 L => LSP - Liskov Substitution Principle <br>
 I => ISP - Interface Segregation Principle <br>
 D => DIP - Dependency inversion Principle <br>
+
+## Import Archive
+<code>yarn add multer</code>
+<code>yarn add @types/multer -D</code>
+Use: import fs from "fs"; This is Node.JS default install. 
+
+## Working with CSV
+<code>yarn add csv-parse</code>
+Use: import { parse as csvParse } from "csv-parse";
+
