@@ -104,3 +104,8 @@ Use: import fs from "fs"; This is Node.JS default install.
 <code>yarn add csv-parse</code>
 Use: import { parse as csvParse } from "csv-parse";
 
+## Documentation
+Tool => Swagger
+<code>yarn add swagger-ui-express</code>
+<code>yarn add @types/swagger-ui-express -D</code>
+In tsconfig.json enable : "resolveJsonModule": true
