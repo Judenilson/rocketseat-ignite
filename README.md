@@ -106,6 +106,19 @@ Use: import { parse as csvParse } from "csv-parse";
 
 ## Documentation
 Tool => Swagger
-<code>yarn add swagger-ui-express</code>
-<code>yarn add @types/swagger-ui-express -D</code>
+```
+yarn add swagger-ui-express
+yarn add @types/swagger-ui-express -D
+```
 In tsconfig.json enable : "resolveJsonModule": true
+
+Create a swagger.json in src folder.
+
+Remember! Import swagger in index.ts and create one route for api.
+```
+import swaggerUi from "swagger-ui-express";
+//after import route:
+import swaggerFile from './swagger.json';
+//route:
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
+```
