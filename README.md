@@ -122,3 +122,18 @@ import swaggerFile from './swagger.json';
 //route:
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 ```
+
+## Docker and Docker Compose
+- Install Docker to desktop in: https://www.docker.com/get-started/
+- Add the flag --poll in "dev" script, for app restart to work.
+- Dock Composer is default in Windows Version
+
+For install Docker Compose in Linux, run:
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/1.28.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
+After that, run docker-compose --version to ensure the installation was successful. If it returns an error (even restarting the terminal), create a symbolic link to usr/bin with the following command:
+```
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+```
