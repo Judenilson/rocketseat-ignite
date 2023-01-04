@@ -1,6 +1,6 @@
 # Rocketseat Ignite Course
 
-## Node.js
+> ## Node.js
 ---
 Starting package.json:
 <code>yarn init -y</code>
@@ -23,7 +23,7 @@ Run nodemon:
 <code>yarn dev</code>
 
 
-## TypeScript
+> ## TypeScript
 ---
 The archive type is .ts now.
 
@@ -88,23 +88,26 @@ https://www.notion.so/judenilson/ESLint-e-Prettier-Trilha-Node-js-acaec106bad848
 <code>yarn add uuid</code>
 <code>yarn add @types/uuid -D</code>
 
-## S.O.L.I.D
+> ## S.O.L.I.D
 S => SRP - Single Responsability Principle <br>
 O => OCP - Open-Closed Principle <br>
 L => LSP - Liskov Substitution Principle <br>
 I => ISP - Interface Segregation Principle <br>
 D => DIP - Dependency inversion Principle <br>
 
-## Import Archive
-<code>yarn add multer</code>
-<code>yarn add @types/multer -D</code>
-Use: import fs from "fs"; This is Node.JS default install. 
+> ## Import Archive
+```
+yarn add multer
+yarn add @types/multer -D
+```
+Use: import fs from "fs"; *This is Node.JS default install.*
 
-## Working with CSV
-<code>yarn add csv-parse</code>
+> ## Working with CSV
+```yarn add csv-parse```
+
 Use: import { parse as csvParse } from "csv-parse";
 
-## Documentation
+> ## Documentation
 Tool => Swagger
 ```
 yarn add swagger-ui-express
@@ -123,7 +126,7 @@ import swaggerFile from './swagger.json';
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 ```
 
-## Docker and Docker Compose
+> ## Docker and Docker Compose
 - Install Docker to desktop in: https://www.docker.com/get-started/
 - Add the flag --poll in "dev" script, for app restart to work.
 - Dock Composer is default in Windows Version
@@ -136,4 +139,62 @@ sudo chmod +x /usr/local/bin/docker-compose
 After that, run docker-compose --version to ensure the installation was successful. If it returns an error (even restarting the terminal), create a symbolic link to usr/bin with the following command:
 ```
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+```
+After configs in Dockerfile, run:
+- imagemName without quotes;
+- . is a local, the root folder in this case.
+```
+docker build -t "imagemName" .
+```
+to run Docker do:
+```
+docker run -p 3333:3333 "imagemName"
+// -p is to mapping dockers ports with the windows, in specific port.
+```
+- list all containes running
+```
+docker ps
+```
+- list all containes
+```
+docker ps -a
+```
+- enter in container
+```
+docker exec -it "container name" /bin/bash
+```
+- To stop a containter
+```
+docker stop "Container ID"
+```
+- To start a containter
+```
+docker start "Container ID"
+```
+- Remove the exists container before create a new with Compose.
+```
+docker rm "Container ID" 
+```
+---
+**<h3>For run with Docker Compose, you can create a docker-compose.yml file, with Docker configurations, and run the command:</h3>**
+
+```
+docker-compose up
+```
+---
+- To run compose in background, to do:
+```
+docker-compose up -d
+```
+- After put in background to see logs , so run the command:
+```
+docker logs "Container_Name" -f
+```
+- to stop dock-composer
+```
+docker-compose stop
+```
+- to remove docker-compose 
+```
+docker-compose down
 ```
