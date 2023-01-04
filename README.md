@@ -198,3 +198,21 @@ docker-compose stop
 ```
 docker-compose down
 ```
+> ## Database
+tool -> TypeORM
+Install:
+```
+yarn add typeorm
+yarn add reflect-metadata
+```
+install PostgreSQL BD Driver:
+```
+yarn dev pg
+```
+- TypeScript configuration<br>
+Also, make sure you are using TypeScript version 4.5 or higher, and you have enabled the following settings in tsconfig.json:
+```
+"emitDecoratorMetadata": true,
+"experimentalDecorators": true,
+```
+The configuration must stay in ormconfig.json
