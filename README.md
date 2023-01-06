@@ -218,3 +218,20 @@ Also, make sure you are using TypeScript version 4.5 or higher, and you have ena
 "experimentalDecorators": true,
 ```
 The configuration must stay in ormconfig.json
+
+### TypeORM
+Create a line instruction in scripts in package.json
+```
+typeorm": "ts-node-dev ./node_modules/typeorm/cli"
+```
+Creating a migration:
+```
+yarn ts-node-dev ./node_modules/typeorm/cli migration:create src/database/migrations/"Migration Name" 
+```
+To execute a migration to do:
+```
+yarn typeorm-ts-node-commonjs migration:run -d src/database/
+```
+To undo the migration run:
+```
+yarn ts-node-dev ./node_modules/typeorm/cli migration:revert
