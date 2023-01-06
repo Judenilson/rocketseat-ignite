@@ -180,6 +180,8 @@ docker rm "Container ID"
 
 ```
 docker-compose up
+//recreating the container
+docker-compose up --force-recreate
 ```
 ---
 - To run compose in background, to do:
