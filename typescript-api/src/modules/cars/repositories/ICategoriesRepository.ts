@@ -1,4 +1,4 @@
-import { Category } from "../model/Category";
+import { Category } from "../entities/Category";
 
 //DTO - Data Transfer Object - Conceito de criar um objeto responsável para passar dados de um classe para outra.
 interface ICreateCategoryDTO {
