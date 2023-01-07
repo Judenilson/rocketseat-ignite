@@ -5,8 +5,6 @@ import {
   ICreateCategoryDTO,
 } from "../ICategoriesRepository";
 
-// Singleton - Criar apenas uma instância de uma classe ficando GLOBAL
-
 class CategoriesRepository implements ICategoriesRepository {
   private repository: Repository<Category>;
 
@@ -29,7 +27,7 @@ class CategoriesRepository implements ICategoriesRepository {
   }
 
   async findByName(name: string): Promise<Category> {
-    const category = await this.repository.findOne({ name });
+    const category = await this.repository.findOneBy({ name });
     return category;
   }
 }
