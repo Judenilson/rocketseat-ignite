@@ -311,7 +311,7 @@ yarn typeorm-ts-node-commonjs migration:run -d src/database/
 To undo the migration run:
 
 ```
-yarn ts-node-dev ./node_modules/typeorm/cli migration:revert`
+yarn ts-node-dev ./node_modules/typeorm/cli migration:revert
 ```
 
 # TSyringe
