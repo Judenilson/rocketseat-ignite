@@ -358,3 +358,11 @@ import "reflect-metadata";
 
 // Your code here...
 ```
+# Password Cryptography
+```
+yarn add bcryptjs
+yarn add @types/bcryptjs -D
+```
+```json
+import { hash } from "bcryptjs";
+```
