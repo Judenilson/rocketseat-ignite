@@ -372,3 +372,9 @@ import { hash } from "bcryptjs";
 yarn add jsonwebtoken
 yarn add @types/jsonwebtoken -D
 ```
+
+# Errors Treatment
+```
+yarn add express-async-errors
+```
+
