@@ -366,3 +366,9 @@ yarn add @types/bcryptjs -D
 ```json
 import { hash } from "bcryptjs";
 ```
+
+# Token
+```
+yarn add jsonwebtoken
+yarn add @types/jsonwebtoken -D
+```
